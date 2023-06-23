@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+    float x, y;
+
+    if (scanf("%f %f", &x, &y) != 2) {
+        printf("n/a\n");
+
+        return 0;
+
+    }
+
+ 
+
+    int c;
+
+    while ((c = getchar()) != '\n' && c != EOF) {
+        if (c != ' ') {
+            printf("n/a\n");
+
+            return 0;
+
+        }
+
+    }
+
+ 
+
+    float distroot = x * x + y * y;
+
+    float radius = 25.0;
+
+    if (distroot < radius * radius) {
+        printf("GOTCHA\n");
+
+    } else {
+        printf("MISS\n");
+
+    }
+
+    return 0;
+
+}
